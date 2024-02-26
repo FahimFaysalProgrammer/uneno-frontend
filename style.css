@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+div {
+  display: block;
+}
+
+/* index.html Navbar: */
+/* label {
+  position: relative;
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill-rule='evenodd'%3E%3Cpath d='M16.036 18.455l2.404-2.405 5.586 5.587-2.404 2.404zM8.5 2C12.1 2 15 4.9 15 8.5S12.1 15 8.5 15 2 12.1 2 8.5 4.9 2 8.5 2zm0-2C3.8 0 0 3.8 0 8.5S3.8 17 8.5 17 17 13.2 17 8.5 13.2 0 8.5 0zM15 16a1 1 0 1 1 2 0 1 1 0 1 1-2 0'%3E%3C/path%3E%3C/svg%3E")
+    center / contain no-repeat;
+} */
+.icon {
+  cursor: pointer;
+}
+.dropdown-hover:hover .dropdown-menu-hover {
+  display: block;
+}
+.banner-img img {
+  margin-top: 127px;
+}
+.banner-title {
+  font-size: 130px;
+  font-weight: 800;
+}
+.banner-description {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+/* btn */
+/* <button class="button-17" role="button">Button 17</button> */
+
+/* CSS */
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fdea45;
+  border-radius: 50px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #b92d5e;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 34px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 40px 40px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  color: black;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.bottom-banner-title {
+  font-size: 50px;
+  font-weight: 700;
+}
+.bottom-banner-price {
+  color: #b92d5e;
+  font-weight: 700;
+  font-size: 40px;
+}
+.bottom-banner-price-offer {
+  color: #3a3a3a;
+  font-size: 16px;
+  background-color: #fdea45;
+  padding: 5px;
+  border-radius: 0px 0px 15px 0px;
+}
+.bottom-banner-description {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #3a3a3a;
+  word-break: break-word;
+}
+
+/* footer */
+li {
+  list-style: none;
+}
+/* footer {
+  padding: 50px;
+  background: linear-gradient(
+    66deg,
+    #1ca8c7 -5.25%,
+    #439fa5 47.76%,
+    #4c7d8c 98.77%
+  );
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* card */
+
