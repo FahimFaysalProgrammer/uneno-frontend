@@ -2,7 +2,7 @@ const handleLogout = () => {
   //   console.log("Logout");
   const token = localStorage.getItem("token");
 
-  fetch("https://testing-8az5.onrender.com/patient/logout", {
+  fetch("https://uneno.onrender.com/customer/logout", {
     method: "POST",
     headers: {
       Authorization: `Token ${token}`,
