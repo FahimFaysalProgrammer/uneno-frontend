@@ -115,17 +115,19 @@
             </div>
             <!-- dorp down end -->
             <!-- search box start -->
-            <form class="d-flex" role="search">
+            <div class="d-flex" role="search">
               <label style="width: 450px">
                 <input
+                  id="search"
                   style="height: 60px"
                   class="form-control me-2 ps-5"
                   type="search"
                   placeholder="What are you looking for ?"
                   aria-label="Search"
+                  onkeydown="handleKeyDown(event)"
                 />
               </label>
-            </form>
+            </div>
 
             <!-- search box end -->
             <!-- icon start -->
@@ -178,6 +180,36 @@
               </div>
             </div>
             <!-- dorp down menu end -->
+            <!-- Dropdown Menu Start -->
+            <div class="dropdown">
+              <button
+                class="btn text-white dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Profile
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="userDetails.html"
+                    ><i class="fa-regular fa-user"></i> View Profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="allproducts.html"
+                    ><i class="fa-regular fa-calendar-check"></i> All
+                    Products</a
+                  >
+                </li>
+                <li onclick="handleLogout()">
+                  <a class="dropdown-item"
+                    ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Dropdown Menu End -->
           </div>
         </nav>
         <!-- Navbar end -->
@@ -620,7 +652,7 @@
         class=""
         style="
           background-image: url(https://uneno.madrasthemes.com/wp-content/uploads/2018/12/01_homepage_v1.jpg);
-          height: 135vh;
+          height: 180vh;
         "
       >
         <div
@@ -646,14 +678,15 @@
                 style="
                   background-color: #f1c6ca;
                   border-radius: 15px;
-                  height: 460px;
+                  height: 490px;
                   width: 200px;
                   padding: 50px;
                   margin: 20px;
                 "
+                id="size-list"
               >
                 <span style="font-weight: 800; font-size: 30px">Size:</span>
-                <div class="form-check">
+                <!-- <div class="form-check">
                   <input
                     class="form-check-input fs-5"
                     type="radio"
@@ -669,229 +702,32 @@
                   >
                     <span style="font-weight: 600">XXM</span>
                   </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                    style="background-color: rgba(0, 0, 255, 0.784)"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">XS</span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                    style="background-color: rgba(0, 0, 255, 0.784)"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">S</span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                    style="background-color: rgba(0, 0, 255, 0.784)"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">M</span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                    style="background-color: rgba(0, 0, 255, 0.784)"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">L</span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                    style="background-color: rgba(0, 0, 255, 0.784)"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">XL</span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                    style="background-color: rgba(0, 0, 255, 0.784)"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">XXL</span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">XXXL</span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">4XL</span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input fs-5"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                  />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 20px"
-                    for="exampleRadios2"
-                  >
-                    <span style="font-weight: 600">5XL</span>
-                  </label>
-                </div>
+                </div> -->
               </div>
               <div
                 style="
                   background-color: #f1ebeb;
                   border-radius: 15px;
-                  height: 460px;
+                  height: 780px;
                   width: 200px;
                   padding: 50px;
                   margin: 20px;
                 "
+                id="color-list"
               >
                 <span style="font-weight: 800; font-size: 30px">Color:</span>
                 <div class="btn-group" role="group" aria-label="Third group">
-                  <h3 class="" style="padding: 0px 10px 0px 0px">Red</h3>
+                  <!-- <h3 class="" style="padding: 0px 10px 0px 0px">Red</h3>
                   <button
                     style="height: 30px; width: 20px; background-color: #ff0000"
                     type="button"
                     class="btn rounded"
-                  ></button>
-                </div>
-                <div class="btn-group" role="group" aria-label="Third group">
-                  <h3 class="" style="padding: 0px 10px 0px 0px">Yellow</h3>
-                  <button
-                    style="height: 30px; width: 20px; background-color: #ffff00"
-                    type="button"
-                    class="btn rounded"
-                  ></button>
-                </div>
-                <div class="btn-group" role="group" aria-label="Third group">
-                  <h3 class="" style="padding: 0px 10px 0px 0px">Green</h3>
-                  <button
-                    style="height: 30px; width: 20px; background-color: #008000"
-                    type="button"
-                    class="btn rounded"
-                  ></button>
-                </div>
-                <div class="btn-group" role="group" aria-label="Third group">
-                  <h3 class="" style="padding: 0px 10px 0px 0px">Blue</h3>
-                  <button
-                    style="height: 30px; width: 20px; background-color: #0000ff"
-                    type="button"
-                    class="btn rounded"
-                  ></button>
-                </div>
-                <div class="btn-group" role="group" aria-label="Third group">
-                  <h3 class="" style="padding: 0px 10px 0px 0px">Pink</h3>
-                  <button
-                    style="height: 30px; width: 20px; background-color: #ffc0cb"
-                    type="button"
-                    class="btn rounded"
-                  ></button>
-                </div>
-                <div class="btn-group" role="group" aria-label="Third group">
-                  <h3 class="" style="padding: 0px 10px 0px 0px">Black</h3>
-                  <button
-                    style="height: 30px; width: 20px; background-color: #000000"
-                    type="button"
-                    class="btn rounded"
-                  ></button>
-                </div>
-                <div class="btn-group" role="group" aria-label="Third group">
-                  <h3 class="" style="padding: 0px 10px 0px 0px">Brown</h3>
-                  <button
-                    style="height: 30px; width: 20px; background-color: #a52a2a"
-                    type="button"
-                    class="btn rounded"
-                  ></button>
+                  ></button> -->
                 </div>
               </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-              <div class="col">
+            <div id="products" class="row row-cols-1 row-cols-md-4 g-4">
+              <!-- <div class="col">
                 <div class="card h-100">
                   <img
                     src="./Images/uneno-product-1.jpg"
@@ -912,7 +748,7 @@
                     >
                       $34.00
                       <button
-                        class="btn btn-warning ms-5 text-white fs-5 fw-medium"
+                        class="btn btn-warning ms-0 text-white fs-5 fw-medium"
                       >
                         <a
                           style="text-decoration: none; color: white"
@@ -923,239 +759,26 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img
-                    src="./Images/uneno-product-1.jpg"
-                    class="card-img-top p-2"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5
-                      style="color: #9e9e9e; font-size: 18px"
-                      class="card-title"
-                    >
-                      Sweaters
-                    </h5>
-                    <h4 style="font-weight: 900">B'Gosh Fleece Cozie</h4>
-                    <p
-                      style="font-size: 20px; font-weight: 600; color: #b92d5e"
-                      class="card-text pt-1"
-                    >
-                      $34.00
-                      <button
-                        class="btn btn-warning ms-5 text-white fs-5 fw-medium"
-                      >
-                        <a
-                          style="text-decoration: none; color: white"
-                          href="./productDetails.html"
-                          >Read more</a
-                        >
-                      </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img
-                    src="./Images/uneno-product-1.jpg"
-                    class="card-img-top p-2"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5
-                      style="color: #9e9e9e; font-size: 18px"
-                      class="card-title"
-                    >
-                      Sweaters
-                    </h5>
-                    <h4 style="font-weight: 900">B'Gosh Fleece Cozie</h4>
-                    <p
-                      style="font-size: 20px; font-weight: 600; color: #b92d5e"
-                      class="card-text pt-1"
-                    >
-                      $34.00
-                      <button
-                        class="btn btn-warning ms-5 text-white fs-5 fw-medium"
-                      >
-                        <a
-                          style="text-decoration: none; color: white"
-                          href="./productDetails.html"
-                          >Read more</a
-                        >
-                      </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img
-                    src="./Images/uneno-product-1.jpg"
-                    class="card-img-top p-2"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5
-                      style="color: #9e9e9e; font-size: 18px"
-                      class="card-title"
-                    >
-                      Sweaters
-                    </h5>
-                    <h4 style="font-weight: 900">B'Gosh Fleece Cozie</h4>
-                    <p
-                      style="font-size: 20px; font-weight: 600; color: #b92d5e"
-                      class="card-text pt-1"
-                    >
-                      $34.00
-                      <button
-                        class="btn btn-warning ms-5 text-white fs-5 fw-medium"
-                      >
-                        <a
-                          style="text-decoration: none; color: white"
-                          href="./productDetails.html"
-                          >Read more</a
-                        >
-                      </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img
-                    src="./Images/uneno-product-1.jpg"
-                    class="card-img-top p-2"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5
-                      style="color: #9e9e9e; font-size: 18px"
-                      class="card-title"
-                    >
-                      Sweaters
-                    </h5>
-                    <h4 style="font-weight: 900">B'Gosh Fleece Cozie</h4>
-                    <p
-                      style="font-size: 20px; font-weight: 600; color: #b92d5e"
-                      class="card-text pt-1"
-                    >
-                      $34.00
-                      <button
-                        class="btn btn-warning ms-5 text-white fs-5 fw-medium"
-                      >
-                        <a
-                          style="text-decoration: none; color: white"
-                          href="./productDetails.html"
-                          >Read more</a
-                        >
-                      </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img
-                    src="./Images/uneno-product-1.jpg"
-                    class="card-img-top p-2"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5
-                      style="color: #9e9e9e; font-size: 18px"
-                      class="card-title"
-                    >
-                      Sweaters
-                    </h5>
-                    <h4 style="font-weight: 900">B'Gosh Fleece Cozie</h4>
-                    <p
-                      style="font-size: 20px; font-weight: 600; color: #b92d5e"
-                      class="card-text pt-1"
-                    >
-                      $34.00
-                      <button
-                        class="btn btn-warning ms-5 text-white fs-5 fw-medium"
-                      >
-                        <a
-                          style="text-decoration: none; color: white"
-                          href="./productDetails.html"
-                          >Read more</a
-                        >
-                      </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img
-                    src="./Images/uneno-product-1.jpg"
-                    class="card-img-top p-2"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5
-                      style="color: #9e9e9e; font-size: 18px"
-                      class="card-title"
-                    >
-                      Sweaters
-                    </h5>
-                    <h4 style="font-weight: 900">B'Gosh Fleece Cozie</h4>
-                    <p
-                      style="font-size: 20px; font-weight: 600; color: #b92d5e"
-                      class="card-text pt-1"
-                    >
-                      $34.00
-                      <button
-                        class="btn btn-warning ms-5 text-white fs-5 fw-medium"
-                      >
-                        <a
-                          style="text-decoration: none; color: white"
-                          href="./productDetails.html"
-                          >Read more</a
-                        >
-                      </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img
-                    src="./Images/uneno-product-1.jpg"
-                    class="card-img-top p-2"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5
-                      style="color: #9e9e9e; font-size: 18px"
-                      class="card-title"
-                    >
-                      Sweaters
-                    </h5>
-                    <h4 style="font-weight: 900">B'Gosh Fleece Cozie</h4>
-                    <p
-                      style="font-size: 20px; font-weight: 600; color: #b92d5e"
-                      class="card-text pt-1"
-                    >
-                      $34.00
-                      <button
-                        class="btn btn-warning ms-5 text-white fs-5 fw-medium"
-                      >
-                        <a
-                          style="text-decoration: none; color: white"
-                          href="./productDetails.html"
-                          >Read more</a
-                        >
-                      </button>
-                    </p>
-                  </div>
-                </div>
+              </div> -->
+            </div>
+            <div
+              style="height: 50vh; width: 100vh"
+              id="nodata"
+              class="nodata text-center"
+            >
+              <img src="./Images/nodata.png" alt="" />
+            </div>
+            <!-- loading spinners start -->
+            <div
+              style="height: 30vh; width: 30vh; padding: 30px"
+              id="spinner"
+              class="text-center spinner"
+            >
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
               </div>
             </div>
+            <!-- loading spinners end -->
           </div>
           <!-- Card end -->
         </div>
@@ -1240,7 +863,57 @@
           </div>
         </div>
       </section>
-      <section></section>
+      <!-- Review section start -->
+      <section style="height: 80vh">
+        <div class="review-container p-3 mt-5 w-50 m-auto">
+          <h1
+            style="font-size: 60px; font-weight: 800"
+            class="text-center m-5 pb-5"
+          >
+            Our Customer Loves Us
+          </h1>
+          <div class="reviews">
+            <div
+              class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible"
+            >
+              <ul id="review-container" class="slider-container py-4">
+                <!-- <li>
+                  <div class="review-card">
+                    <img src="./Images/girl.png" alt="" />
+                    <h4>reviewer</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Reprehenderit odio fuga omnis deserunt, dignissimos dolor suscipit
+                      aperiam cupiditate culpa odit.
+                    </p>
+                    <h6>*****</h6>
+                  </div>
+              </li> -->
+              </ul>
+
+              <button
+                type="button"
+                class="slider-nav"
+                aria-label="Go left"
+              ></button>
+              <button
+                type="button"
+                class="slider-nav slider-nav-next"
+                aria-label="Go left"
+              ></button>
+
+              <div class="slider-indicators">
+                <button class="active" aria-label="Go to slide"></button>
+                <button aria-label="Go to slide"></button>
+                <button aria-label="Go to slide"></button>
+                <button aria-label="Go to slide"></button>
+                <button aria-label="Go to slide"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Review section end -->
     </main>
     <!-- Footer area start -->
     <footer class="p-5">
@@ -1353,6 +1026,7 @@
     <!-- Footer area end -->
     <!-- JS Link -->
     <script src="./app.js"></script>
+    <script src="./productDetails.js"></script>
     <!-- Bootstrap JS Link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

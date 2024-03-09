@@ -32,9 +32,9 @@ const handleRegistration = (event) => {
         password
       )
     ) {
-      console.log(info);
+      // console.log(info);
 
-      fetch("https://smart-care.onrender.com/patient/register/", {
+      fetch("https://uneno.onrender.com/customer/register/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(info),
@@ -57,11 +57,11 @@ const getValue = (id) => {
 };
 
 const handleLogin = (event) => {
-  event.preventDefault(); // reload nebe na
+  event.preventDefault();
   const username = getValue("login-username");
   const password = getValue("login-password");
   // Post Method:
-  fetch("https://smart-care.onrender.com/patient/login/", {
+  fetch("https://uneno.onrender.com/customer/login/", {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ username, password }),
@@ -78,10 +78,3 @@ const handleLogin = (event) => {
       }
     });
 };
-
-// Test:
-// const pass = 1234;
-// const pass2 = "Fahim@1234";
-// console.log(
-//   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(pass2)
-// );
